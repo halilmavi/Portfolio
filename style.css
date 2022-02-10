@@ -1,0 +1,560 @@
+ *                              /*Yıldız sembolü sayfadaki her bir öğeyi seçer. Çoğu kez margin ve paddingleri sıfırlamak için bunu kullaniriz fakat tarayiciya cok yuk bindirir. */
+ {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;    /*box-sizing özelliği bize kutunun genişliğinin border ve padding değerlerinin içerip içermemesi gerektiğini tanımlama imkanı sağlıyor. border-box attribute'u genislik veya yukseklik degeri padding ve border degerlerinide icerir.Yani Bir nesnenin kapladigi alan nesnenin genisligi + padding + border degerlerinin toplamidir. */
+ }
+
+ html
+ {
+    font-size: 6px;           /* 1 rem'i 6 px olarak tanimladik. Mobil ekran boyutunu dusunerek dusuk piksel verdik.*/         
+ }
+ 
+ body
+ {
+    font-family: 'Lato', sans-serif;            /* iki farkli font stilini tanimlama islemi yaptik. */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;          /* rem cinsinden sayfamiza font degerleri tanimlayacagiz.Çünkü sayfamizin responsive olarak hazirlayacagimiz icin orantisal olarak tum sayfanin kuculup veya buyumesi gerekir. */
+    font-weight: 400;           /* Harflerimize hacim kazandirarak daha kalin ve koyu yazilmasini saglar. */
+    line-height: 1.5;           /* Satirlar arasi boslugu ayarladik. */
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+    font-weight: 700;
+    font-family: Montserrat;
+}
+
+a
+{
+    text-decoration: none;       /* Tum a etiketlerindeki alt cizgiyi kaldirdik.*/
+   
+}
+
+ul
+{
+    list-style: none;
+}
+
+section                      /* Ayri ayri yerlerde tanimladigimiz css'leri ayni etiketi kapsadigi durumlarda css kodlarini ortak bir etiket alaninda yazabiliriz.*/
+{
+    padding-top: 10rem;
+    padding-bottom:10rem;
+    text-align: center;
+}
+
+.btn-social                             /* Footer kisminda yer alan sosyal medya butonlarimiz icin duzenlemis oldugumuz css'imiz*/
+{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2 rem;
+    line-height:2 rem ;
+    
+}
+
+.btn-large
+{
+    font-size: 2rem; 
+    padding: 1.1rem 1.1em;           /* Download butonumuzun disindaki cercevesinin boyutunu duzenledik. */ 
+}
+
+.btn                                 /* Download ve Send butonlarimizi duzenlemis oldugumuz css kodlarimiz. */
+{   margin-top: 4rem;                /* Yukardaki metin ile buton arasina mesafe koyma islemi yaptik. */
+    padding: 2.8rem 1.6rem ;         /* 2.8 rem asagidan ve yukaridan vermis oldugumuz mesafe degerimiz. 1.6rem ise sagdan ve soldan vermis oldugumuz mesafe degerimiz. */
+    font-weight: 400;                /* font-weight ile butonumuzun harflerine dolgunluk vererek kalinlastirdik ve daha belirgin bir hale soktuk. */
+    display: inline-block;           /* margin ve padding degerleri etki etmesi icin displayine de inline-block dedik. */
+    background-color: transparent;   /* Butonumuzun arka plan rengi sayfanin arka plan rengine yakin bir renk olur. */
+    border: 2px solid transparent;        
+    color: #fff;
+    border-radius: .4rem;             /* Butonumuzun sahip oldugu cerceveye oval bir gorunum verdik.*/
+    cursor: pointer;
+    transition: all .5s;
+    
+   
+}
+
+.btn-social                             /* Footer kisminda yer alan sosyal medya butonlarimiz icin duzenlemis oldugumuz css'imiz*/
+{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2 rem;
+    line-height:2 rem ;
+}
+
+.btn-outline
+{
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+   
+}
+
+.btn-outline:hover {                            /* Download butonumuzun uzerine fare ile geldiginde gerceklesen hover olayini duzenledik.*/
+    color:#212529;
+    background-color: #fff;
+    
+}
+
+.btn-primary                                    
+{   
+    color:#fff;
+    background-color: #18BC9C;                  /* Butonumuzun arka plan rengini tanimladik.*/         
+    border-color:#18BC9C;                       /* Send butonu cevresindeki cervemizin rengini tanimladik. */
+    padding: 1rem 0.7rem;                         /* Send butonunun boyutunu duzenleme islemi yaptik. */
+}
+
+.btn-primary:hover                                /* Send butonumuzun uzerine fare ile geldiginde gerceklesen hover olayini duzenledik.*/
+{                            
+    background-color:  #128f76;                 /* Hover olayi gerceklestigindeki arka plan rengimizi tanimladik.*/
+    border-color: #128f76;
+   
+}
+
+.img-fluid                    /* Profile.png fotografini duzenlemek icin class olusturduk.*/
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix::after                 /* Float isleminden dolayi clearfix'i tanimladik cunku float ile hizalama yaptiktan sonra altinda yer alan etiketlerin sirasini bozdugu icin clearfixi kullanmamiz gerekiyor. */
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col
+{
+    float: left;
+    width: 100%;       /* Sayfamizda 3 tane fotografi yanyana koyabilmek icin %33 tanimlariz ,2 tane fotograf gostermek isteseydik %50 diyebilirdik. 4 tane yanyana koymak isteseydik %25 diye tanimlamamiz gerekirdi. Biz sayfamizi en kucuk ekran boyutu olan mobile gore ayarlamamiz gerekir o yuzden 100% ayarladik.. */
+    padding: 1rem;
+    
+}
+
+.container
+{
+    width: 100%;                /* Containerimiza 100% diyerek sayfanin tamamini kaplar. Bu sekilde sabit bir olcu vermedigimiz icin scrollbarin cikmasinin onune gecmis oluruz.*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+}
+
+/* Responsive tasarim icin ekran boyutunu @media ile duzenleme islemi yapacagiz.  */
+/* Asagida piksel araliklari olusturduk. Bu piksel araliklari en sik kullanilan araliklardan o yuzden bu tarz kullanim sikligina gore boyutlarimizda gecis yapmamiz sayfamizin verimini artirir. */
+@media (min-width:576px)
+{
+    .container
+    {
+        max-width: 540px;           /* 540px uzerine cikamaz. 36px pay birakmamizin sebebi ise de kenarlardan otomatik padding degerleri tanimlamis olmamiz. Asagidaki max-width tanimlarimizda da ayni sey gecerli. */
+    }
+
+    html 
+    {
+        font-size: 7px;
+    }
+}
+
+@media (min-width:768px)
+{
+    .container
+    {
+        max-width: 720px;
+    }
+    html 
+    {
+        font-size: 8px;
+    }
+    .col{
+        width: 50%;
+    }
+}
+
+@media (min-width:992px)
+{
+    .container
+    {
+        max-width: 960px;
+    }
+    html 
+    {
+        font-size: 9px;
+    }
+    .col{
+        width: 33.3333%;
+    }
+}
+
+@media (min-width:1200px)
+{
+    .container
+    {
+        max-width: 1140px;
+    }
+    html 
+    {
+        font-size: 10px;
+    }
+}
+
+.text-uppercase                     /* Metinlerimizin hepsini buyuk harfe donusturme islemi yapmak icin sinif tanimladik. */
+{
+    text-transform: uppercase;
+}
+/*navbar*/
+nav
+{   width: 100%;                        /* Start Bootsrap  arka planindaki lacivert renk genisligi tamamen kaplamasi icin width'i %100 verdik. */
+    font-family: Montserrat;
+    background-color: #2C3E50;
+    color: #fff;
+    padding-top: 2.4rem;                 /* 25px'lik bir bosluk biraktik yukaridan.*/
+    padding-bottom: 2.4rem; 
+    position: fixed;
+    z-index: 500;                        /* Sayfayi kuculttugumuzde cizginin icindeki yildiz amblemi nav olarak tanimladigimiz lacivert seridimizin uzerine geldiginde gozukmesini engellemek icin z-index tanimladik.*/ 
+}
+
+#logo-box
+{
+    float: left;
+    padding-top: .5rem;
+}
+
+#logo-box .logo     /*logo-box id si ile tanimlamis oldugumuz div etiketimizin attributelarini tanimladik.*/
+{
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.2rem;  /* 32 px lik font olcusu tanimladik.*/
+}
+
+#nav-links              /* nav-link id'si ile tanimlamis oldugumuz menu elemanlarini saga dogru hizalama islemi yaptik. */
+{           
+    float: right;       /* Portfolio-About-Contact menulerini saga dogru yaslama islemi yaptik. */
+}
+
+#nav-links .nav-item  
+{
+    float: left;
+    margin: .4rem;
+}
+
+#nav-links .nav-link        /* Sag ustte yer alan menumuzun 3 elemanina font degerleri tanimladik.*/
+{      
+    color: #fff;
+    font-size:1.6rem;
+    font-weight: 700;
+    display: block;         /* Tum koselerden padding degerleri aktif olabilmesi icin displayini block olarak tanimladik. */
+    padding:1.6rem;         /* Her koseden 16 px lik bosluk tanimladik. */
+    letter-spacing: .1rem;  /* Harf araliklarini biraz actik.*/
+    transition: color .3s;  /* Faremiz menulerin uzerine geldiginde hover olayi gerceklesirken renk degisimin sureni tanimladik.*/
+}   
+
+#nav-links .nav-link:hover  /* Sag ustteki menumuzde yer alan 3 elamana hover ozelligi tanimladik. */
+{
+    color: #18bc9c;
+}
+
+#nav-links .nav-icon
+{
+    display: none;
+}
+
+@media(max-width:992px) /* Navbar kismindaki Portfolio-About-Contact menuleri 992px'le kadar solda Start Bootsrap altinda kalacak sekilde ayarladik. 992px gectikten sonra normal haline sag uste gececek. */
+{
+    #logo-box               
+    {
+        float: none;
+        text-align: left;
+    }
+    #nav-links
+    {
+        float: none;
+    }
+
+    #nav-links.responsive li:not(:first-child)        /* Nav icerisinde ul etiketlerinin altindaki li etiketlerinin 1.si haric diger 3 elemana ozel css tanimlama islemi yaptik. Mobil gorunume gectiginde Portfolio, About,Contact butonlarini kaybedip menu ikonumuza tiklanildiginda gostermesini saglayacagiz.*/
+    {
+        display: none;
+    }
+
+    #nav-links .nav-link        /*Portfolio-About-Contact menulerinin padding ve fontsize ozellikllerini duzenledik. */
+    {
+        font-size: 2rem;
+        padding-left: 0;
+
+    }
+
+    #nav-links .nav-item 
+    {
+        float: none;                    /*Portfolio-About-Contact menu butonlari alt alta gelmesi icin float'i none yaptik. */
+        text-align: left;
+        
+    }
+    
+    #nav-links .nav-icon
+    {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 3rem;
+
+    }
+}
+
+/* Header */
+header
+{
+    background-color:#18BC9C ;    
+    padding-top:calc(112px + 10rem);        /* REsponsive tasarim olmasi icin px olcumuzun yanina ekstra olarak calc fonksiyonu ile rem olcusu de ekledik.*/
+    padding-bottom:112px;
+    text-align: center;
+}
+
+header h1                                /* Yukarda H etiketlerimizi tanimladik fakat yukarda tanimlamis oldugumuz genel ozellikler disinda daha spesifik ozellikler tanimlayip attributelarimizi ezebiliriz. */
+{
+    color:#fff;                        /* Profil fotomuzun altindaki yaziya beyaz rengi verdik.*/
+    font-size: 7.6rem;                   /* Profil fotomuzun altindaki yaziya font degeri verdik.*/               
+}
+
+header h2
+{
+    color: #fff;
+    font-size: 2.8rem;
+    font-family:'Lato' ;
+    font-weight: 300;
+}
+hr.star-light
+{
+    border-color: #fff ;
+}
+
+hr.star-dark
+{
+    border-color: #2C3E50 ;
+}
+
+.star-light, .star-dark                              /* Hr etiketine tanimlamis oldugumuz star line sinifi ile yatay cizgimize border tanimlayarak biraz daha dolgun bir hale getirip Start Boostrap yazinin altindaki beyaz cizgi, yildizlar tekrardan beyaz cizgi seklini olusturmak icin bu islemi yaptik.  */
+{   
+    border: none;                        /* Borderimizin suan tek cizgi halinde gozukmesini ıstegimiz icin borderin  */
+    border-top: .4rem solid #fff;      /* Borderimizi top olarak tanimladigimiz icin ust kisim belirginlestirip olusturduk. Tek cizgi ceklinde gozukecegi icin padding degeri verip dikdortgen gibi gosterim saglayacagiz. */
+    max-width: 25rem;                    /* Cizgimizin genisligini 25 rem yaparak yarim bir cizgi haline getirtik.*/
+    margin: 3rem auto;                 /* Cizgimizi blok icerisinde ortaya tasiyabilmek icin margin degeri tanimladik. */ 
+    overflow: visible;                   /* Yildizimizi asagidan yukari tasima islemi yaparken meydana gelen tasima isleminde gorunmeyen tasan kismi gorunur yapmak icin visible tanimladik.*/
+    border-radius: 3rem;                 /* Cizmizin uc kisimlarini asagiya dogru egim verdik.*/ 
+    height: 2rem;
+}
+
+.star-light::after 
+{
+    color: #fff;
+    background-color: #18BC9C;
+
+} 
+
+.star-dark::after 
+{
+    color: #2C3E50;
+    background-color:#fff;                /* Yildizimizin arkasinda gozuken icine dogru giren beyaz cizgilerin yerine yildizimiza arka planin fon renginden vererek goruntunun onune gectik. */
+} 
+.star-light::after, .star-dark::after  
+{   
+    content: "\f005";
+    font-family: "Font Awesome 5 Free" ;    
+    font-weight: 900;                      /* Font-weight ile yildizimizin icinin doldurduk*/
+    font-size: 3.2rem;
+    position: relative;                    /* Oldugu yerden yukari veya asagi yonde hareket edeceegi icin relative olarak tanimladik hem x hem y koordinatinda hareket etseydi absolute olarak tanimlayacaktik.*/
+    top: -2.6rem;                          /* Yildizimizi konumundan yukari dogru tasimak icin top attributenu tanimladik.*/
+    padding: .4rem .8rem;                  /* Cizgilerin arasina gelen yildizimizin cizgiler ile arasine mesafe koyduk.*/
+              
+}
+
+/* Portfolio*/
+
+#portfolio 
+{
+                  
+    padding-top: 10rem;
+    padding-bottom:10rem;
+    text-align: center;                     /* Portfolio yazimizi ortalama islemi gerceklestirdik. */
+    
+}
+
+#portfolio h2{
+    font-size: 4.8rem;                      
+    color: #2C3E50;                       
+}
+
+.portfolio-item         
+{
+    position: relative;         /* img overlay'in komunlandirilmasini portfolio-item'a gore konumlandirilma yapilmasi icin position'a relative dedik. */
+}
+
+.portfolio-item img             /* Img ile icon ust uste gelmesi icin displayini block yaptik*/ 
+{
+    display: block;
+}
+
+.img-overlay 
+{
+    position: absolute;
+    top: 0;                        /* portfolio-item'in sol kosesinden itibaren */
+    left: 0;
+    height: 100%;                  /* İkomuz arka plan renginin boyutunu tanimladik. div sinirlari icerisindeki fotografimizin tamamini arka plan rengi kaplayacak. opacity = 0 oldugu icin fotografimiz arka plan rengi gozukmez. */
+    width: 100%;
+    background-color: #18BC9C;  /* İkonumuzun arka plan rengini tanimladik. */
+    opacity: 0;
+    transition: opacity .5s ease;            
+}
+
+.img-overlay .icon
+ {
+     color: #fff;
+     font-size: 2rem;
+     position: absolute;
+     top: 50%;
+     left:50%;
+     transform: translate(-50%,-50%); /* -50 ust taraftan -50 sol taraftan mesafe birakarak arama ikonumuzu div kutusunun icinde konumlandirma islemi gerceklestirdik. Not: Transform : translate x ve y eksenin uzerinde nesnemizin hareket etmesini saglar.*/
+ 
+}
+
+.portfolio-item:hover .img-overlay
+{
+    opacity: 0.8;
+}
+
+/* About */
+
+#about
+{
+    background-color: #18BC9C;
+    color: #fff;
+    
+}
+
+#about h2 
+{
+    font-size: 4.8rem;
+}
+
+#about-text 
+{
+    text-align: left;
+}
+
+#about-text .left 
+{
+    float: none;                                        /* Mobil goruntu icin yazilarimiz alt alta gelsin diye floatlari none yaptik ve kenar bosluklarini azalttik.*/
+    width: 100%;
+    padding-right: 5px;                                 /* İki metin arasina mesafe ekledik.*/
+    padding-left: 25px;                                 /* Sol metinimizi soldan 230 px mesafe ile ortaya yaklastirdik.*/
+}
+
+#about-text .right 
+{
+    float: none;
+    width: 100%;
+    padding-left: 5px;                                  /* İki metin arasina mesafe ekledik.*/
+    padding-right: 25px;                                /* Sag metinimizi sagdan 230 px mesafe ile ortaya yaklastirdik.*/
+ }
+
+#about-text .text
+{
+    font-size: 2rem;
+}
+
+@media(min-width:992px)                                 /* About kismini ekran boyutu 992px ulastiginda farkli olculer vererek duzenleme islemi yaptik. */
+{
+    #about-text .left 
+    {
+        float: left;                
+        width: 50%;
+        padding-right: 10px;                            /* İki metin arasina mesafe ekledik. */
+        padding-left: 210px;                            /* Sol metinimizi soldan 230 px mesafe ile ortaya yaklastirdik. */
+    }
+
+    #about-text .right 
+    {
+        float: right;
+        width: 50%;
+        padding-left: 10px;                             /* İki metin arasina mesafe ekledik.*/
+        padding-right: 210px;                           /* Sag metinimizi sagdan 230 px mesafe ile ortaya yaklastirdik. */
+    }
+}
+
+/* Contact */
+#contact h2
+{
+    font-size: 4.8rem;                      
+    color: #2C3E50;  
+}
+
+#contact-form
+{
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;                                             /* Formumuzda yer alan text'leri ve butonu sola yaslama islemi yaptik. */
+   
+}
+
+.form-group            
+{
+    border-bottom: 1px solid #e9ecef;                           /* Iletisim menusunde dolduracak oldugumuz text box'larin arasina border ekledik. */
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+    
+}
+
+.form-group input,.form-group textarea                               /* Form-group icindeki input ve textarea icin ortak bir css olusturduk. */
+{
+    border: none;                                                    /* input cevresindeki border cercevelerini kaldirmak icin border'i none yaptik. */
+    width: 100%;
+    display: block;                                                  /* Width etkili olabilmesi icin displayine block dedik. dedik.  */
+    font-size: 2.4rem;
+} 
+
+.form-group input,textarea:focus                                     /*inputlarimizi ve textarea'nin outline sifirladik ki fare ile tiklanildiginde cevresindeki cerceve gozukmesin. */
+{
+    outline: 0;                                                       /* Fare ile form doldurma alanlarine gelip tikladigimizda bilgi alani etrafindaki cerceve cikiyor bunu engellemek icin outlin'a sifir dedik. */
+}
+
+/* Footer */
+
+footer 
+{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #2C3E50;                                  /* Footer kismimizin arka plan rengini tanimladik. */
+    color: #fff;
+    text-align: left;
+}
+
+footer h4
+{
+    font-size: 2.4rem;
+}
+
+footer p 
+{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+footer li                           
+{
+    display: inline-block;                                       /* Yuvarlak sosyal medya ikonlarini yan yana getirmek icin displayina inline-block dedik.*/
+    margin-right: 1rem;
+}
+
+.copyright
+{
+    background-color: #1A252f;
+    padding-top:2.4rem;
+    padding-bottom: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+
